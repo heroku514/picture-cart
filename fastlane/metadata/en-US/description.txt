@@ -1,0 +1,5 @@
+Picture Cart is a grocery list made of big pictures. A child can tap the apple. A grandparent can switch to extra-large type. The whole family can walk the store one item at a time.
+
+Tap a picture to put it in the cart. Add your own item when the picture is not there. Shop mode shows one thing to find, with Found it and Not yet. The bag keeps what is still needed and what you already picked up.
+
+The list and the text size stay on this phone. Picture Cart does not use an account, ads, or a network connection.

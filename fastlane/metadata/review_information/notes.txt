@@ -1,0 +1,1 @@
+Picture Cart is an offline grocery list. Open Pick and tap Add Milk. Open Shop and tap Found it. Open Size and tap Extra large. The list remains after you leave the app. There is no account and no network use.
