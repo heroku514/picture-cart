@@ -7,6 +7,7 @@ import {
   Text,
   TextInput,
   View,
+  Keyboard,
 } from "react-native";
 import { AISLES } from "./src/catalog";
 import {
@@ -78,6 +79,7 @@ export default function App() {
   }
 
   function onAddCustom() {
+    Keyboard.dismiss();
     const result = addCustom(entries, custom);
     setEntries(result.entries);
     setNote(result.note);
@@ -149,6 +151,8 @@ export default function App() {
               />
             </View>
             <View style={styles.form}>
+              <BigButton label="Add custom item" scale={scale} onPress={onAddCustom} filled />
+              <Text style={[styles.note, { fontSize: 20 * scale }]}>{custom.trim() ? custom.trim() : "Nothing typed yet."}</Text>
               <TextInput
                 value={custom}
                 onChangeText={setCustom}
@@ -157,11 +161,11 @@ export default function App() {
                 accessibilityLabel="Custom item name"
                 style={[styles.input, { fontSize: 20 * scale }]}
                 autoCorrect={false}
+                spellCheck={false}
                 autoCapitalize="words"
                 returnKeyType="done"
                 onSubmitEditing={onAddCustom}
               />
-              <BigButton label="Add custom item" scale={scale} onPress={onAddCustom} filled />
             </View>
             {[0, 2].map((start) => (
               <View key={start} style={styles.row}>
