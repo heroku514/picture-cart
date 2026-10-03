@@ -60,6 +60,21 @@ platform :ios do
     end
   end
 
+  desc "Upload screenshots"
+  lane :screenshots do
+    load_asc_api_key
+    deliver(
+      skip_binary_upload: true,
+      skip_metadata: true,
+      skip_screenshots: false,
+      overwrite_screenshots: true,
+      force: true,
+      submit_for_review: false,
+      run_precheck_before_submit: false,
+      precheck_include_in_app_purchases: false
+    )
+  end
+
   desc "Upload an existing IPA"
   lane :upload do
     load_asc_api_key
